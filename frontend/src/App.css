@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,94 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@1&family=Andika&family=Catamaran:wght@400;500&family=Inter:wght@300&family=Kaushan+Script&family=Labrada:wght@300&family=Lato:wght@300;400&family=Montserrat:wght@200;300&family=Open+Sans:wght@300;400;500&family=PT+Sans&family=Poppins&family=Raleway:ital,wght@0,300;0,500;0,600;1,300&family=Tangerine:wght@400;700&family=Ubuntu:wght@300&family=Vollkorn&family=Work+Sans&display=swap");
+
+.loginpage {
+  display: flex;
+}
+
+.loginpage img {
+  max-width: 100%;
+}
+
+#textonconcert {
+  position: absolute;
+  top: 80vh;
+  color: white;
+  font-size: xx-large;
+  right: 70%;
+  left: 10%;
+}
+
+.loginpage {
+  /* align-items: center; */
+  color: white;
+  text-align: center;
+  background: black;
+}
+
+#superapp {
+  color: #72db73;
+  font-size: xx-large;
+  /* font-style: italic; */
+  /* font-family: "Alumni Sans Pinstripe", sans-serif; */
+  /* font-family: "Andika", sans-serif;
+  font-family: "Catamaran", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Labrada", serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;*/
+
+  font-family: "Poppins", sans-serif;
+  /*font-family: "PT Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Tangerine", cursive;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Vollkorn", serif;
+  font-family: "Work Sans", sans-serif; */
+}
+
+.login-inputs {
+  display: flex;
+  justify-content: center;
+}
+.login-inputs input {
+  padding: 0.75rem;
+  margin: 1rem;
+  width: 50%;
+  background: #292929;
+  border: none;
+}
+
+.login-inputs button {
+  width: 50%;
+  padding: 1rem;
+  background: #72db73;
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+#registration {
+  width: initial !important;
+  /* align-items: self-start;
+  flex-direction: row; */
+  color: white;
+  /* display: flex; */
+}
+
+#termandconditions {
+  color: #72db73;
+}
+
+#privacypolicy {
+  color: #72db73;
+}
+
+.tc p {
+  /* width: 500px; */
+  text-align: center;
 }
