@@ -1,0 +1,57 @@
+.page-categories {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  background: black;
+  color: white;
+}
+
+.layout div {
+  width: 100%;
+}
+
+.film-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#superapp {
+  color: #11b800;
+}
+
+#choose-entertainment {
+  font-size: 5rem;
+}
+
+.selected-buttons-categories button {
+  width: 110px;
+  border-radius: 50px;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background: #11b800;
+  color: white;
+}
+
+#minimum-three-category {
+  color: red;
+}
+.selected-buttons-categories button span {
+  margin: 10px;
+}
+
+.button-nextpage button {
+  background: #11b800;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  margin: 0.5rem;
+  border-radius: 50px;
+}
