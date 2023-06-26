@@ -8,9 +8,9 @@ import DashTimerNotes from "./components/DashTimerNotes";
 function App() {
   return (
     <div className="App">
-      {/* <Loginpage />
+      <Loginpage />
       <Entertainmentcategory />
-      <Dashboard /> */}
+      <Dashboard />
       <DashTimerNotes />
     </div>
   );
