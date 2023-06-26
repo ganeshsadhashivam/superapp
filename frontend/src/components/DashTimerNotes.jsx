@@ -121,10 +121,32 @@ const DashTimerNotes = () => {
         <div className="nature-dash-timer-notes">
           <div>
             <aside>
-              <div>
+              {/* <div>
                 <img src={Everest} alt="" />
+              </div> */}
+              <div>
+                <figure>
+                  <img src={Everest} alt="" />
+                  <figcaption>
+                    <div>
+                      <div>
+                        <p>Want to climb Mount Everest?</p>
+                      </div>
+                      <div className="date-time-in-nature">
+                        <div>
+                          <p>25-6-2023</p>
+                        </div>
+                        {/* <hr id="hr" /> */}
+                        <span>|</span>
+                        <div>
+                          <p>7.28PM</p>
+                        </div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
               </div>
-              <div className="nature-short-info-dash-timer-notes">
+              {/* <div className="nature-short-info-dash-timer-notes">
                 <div>
                   <p>Want to climb Mount Everest?</p>
                 </div>
@@ -137,7 +159,7 @@ const DashTimerNotes = () => {
                     <p>7.28PM</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="nature-info-dash-timer-notes">
                 <p>
                   In the years since human beings first reached the summit of
