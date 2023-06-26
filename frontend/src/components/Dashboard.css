@@ -70,6 +70,7 @@
   color: white;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  width: 1000px;
 }
 
 .weather-info p {
@@ -84,6 +85,7 @@
   color: white;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  width: 1000px;
 }
 
 hr {
