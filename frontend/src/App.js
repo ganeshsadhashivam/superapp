@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <Loginpage />
-      {/* <Entertainmentcategory />
+      <Entertainmentcategory />
       <Dashboard />
-      <DashTimerNotes /> */}
+      <DashTimerNotes />
     </div>
   );
 }
