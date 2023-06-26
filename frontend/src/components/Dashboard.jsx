@@ -77,9 +77,29 @@ const Dashboard = () => {
         <div>
           <aside>
             <div>
-              <img src={Everest} alt="" />
+              {/* <img src={Everest} alt="" /> */}
+              <figure>
+                <img src={Everest} alt="" />
+                <figcaption>
+                  <div>
+                    <div>
+                      <p>Want to climb Mount Everest?</p>
+                    </div>
+                    <div className="date-time-in-nature">
+                      <div>
+                        <p>25-6-2023</p>
+                      </div>
+                      {/* <hr id="hr" /> */}
+                      <span>|</span>
+                      <div>
+                        <p>7.28PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
             </div>
-            <div className="nature-short-info">
+            {/* <div className="nature-short-info-dashboard">
               <div>
                 <p>Want to climb Mount Everest?</p>
               </div>
@@ -92,7 +112,7 @@ const Dashboard = () => {
                   <p>7.28PM</p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="nature-info">
               <p>
                 In the years since human beings first reached the summit of
