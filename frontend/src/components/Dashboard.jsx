@@ -12,13 +12,13 @@ const Dashboard = () => {
             <img src={UserImage} alt="" id="useravatar" />
             <div className="user-info">
               <div>
-                <p id="username">ganesh</p>
+                <p id="dashboard-username">ganesh</p>
               </div>
               <div>
-                <p id="email">ganeshsadhashivam@outlook.com</p>
+                <p id="dashboard-email">ganeshsadhashivam@outlook.com</p>
               </div>
               <div>
-                <p id="name">ganesh</p>
+                <p id="dashboard-name">ganesh</p>
               </div>
               <div className="movie-categories">
                 <div>

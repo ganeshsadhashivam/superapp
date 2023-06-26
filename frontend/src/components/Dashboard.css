@@ -34,9 +34,9 @@
   margin: 5rem;
 }
 
-#username,
-#name,
-#email {
+#dashboard-username,
+#dashboard-name,
+#dashboard-email {
   font-size: 1.5rem;
 }
 
