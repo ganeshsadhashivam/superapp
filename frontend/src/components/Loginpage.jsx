@@ -1,27 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../assets/image 13.png";
 import { useState } from "react";
 const Loginpage = () => {
+  // To Store Data in Local Strorage
+  const [logindetails, setLoginDetails] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("logincredentials", JSON.stringify(logindetails));
+  }, [logindetails]);
+
   const [name, setName] = useState("");
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [error, setError] = useState(false);
-
+  console.log(name);
+  console.log(username);
+  console.log(email);
+  console.log(mobile);
   const validate = (e) => {
     e.preventDefault();
     if (name || username || email || mobile === "") {
       setError(true);
     }
+    setLoginDetails({ name });
+    setLoginDetails({ username });
+    // setLoginDetails(email);
+    // setLoginDetails(mobile);
   };
 
   const handleInput = (e) => {
+    console.log(e.target.value);
+    console.log(e);
     setName(e.target.value);
-    setUserName(e.target.setUserName);
-    setEmail(e.target.email);
-    setMobile(e.target.mobile);
+    setUserName(e.target.value);
+    //setEmail(e.target.value);
+    //setMobile(e.target.value);
   };
-  console.log(name);
+
   return (
     <div className="loginpage">
       <div>
