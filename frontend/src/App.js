@@ -4,6 +4,7 @@ import Loginpage from "./components/Loginpage";
 import Userpage from "./components/Dashboard";
 import Dashboard from "./components/Dashboard";
 import DashTimerNotes from "./components/DashTimerNotes";
+import MoviesList from "./components/MoviesList";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Entertainmentcategory />
       <Dashboard />
       <DashTimerNotes />
+      <MoviesList />
     </div>
   );
 }
