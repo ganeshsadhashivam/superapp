@@ -83,6 +83,7 @@ const DashTimerNotes = () => {
             <div>
               <p>All notes</p>
               <p>This is how i am going to learn MERN stack in 3 Months</p>
+              <textarea name="" id="" cols="50" rows="30"></textarea>
             </div>
           </div>
           <div>
