@@ -20,3 +20,13 @@ header div p {
 #Entertainment-text {
   margin: 0px 20px 0px 20px;
 }
+
+.movie-posters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.movie-posters div img {
+  width: 100%;
+}

@@ -4,55 +4,34 @@ import Avatar from "../assets/image 14 (1).png";
 const MoviesList = () => {
   const [movielist, setMovieList] = useState([]);
 
-  //   const url = 'https://unogs-unogs-v1.p.rapidapi.com/title/images?netflix_id=%3CREQUIRED%3E';
-  // const options = {
-  // 	method: 'GET',
-  // 	headers: {
-  // 		'X-RapidAPI-Key': 'efde1368camsh8c7919dbd53c7a0p18fc8djsn9492e2f31a88',
-  // 		'X-RapidAPI-Host': 'unogs-unogs-v1.p.rapidapi.com'
-  // 	}
-  // };
-
-  // try {
-  // 	const response = await fetch(url, options);
-  // 	const result = await response.text();
-  // 	console.log(result);
-  // } catch (error) {
-  // 	console.error(error);
-  // }
-  const fetchMovieData = async () => {
-    // fetch(
-    //   "https://unogs-unogs-v1.p.rapidapi.com/title/images?netflix_id=%3CREQUIRED%3E"
-    // )
-    //   .then((response) => {
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     setMovieList(data);
-    //   });
-    const url = "https://unogs-unogs-v1.p.rapidapi.com/title/images";
+  const fetchMovieData = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "efde1368camsh8c7919dbd53c7a0p18fc8djsn9492e2f31a88",
-        "X-RapidAPI-Host": "unogs-unogs-v1.p.rapidapi.com",
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNGNiODA5ZGM0ODU3ZTE2OTg2OTZlMjczNzUzZmY2ZiIsInN1YiI6IjYzNjM3MzYwNjlkMjgwMDA3ZDFhNGM3OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yq1n2U4BvR9sVGVwXd3Oc5sJJrVhRc8cPL8sH-JQ5c4",
       },
     };
 
-    try {
-      const response = await fetch(url, options);
-      const result = await response.text();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
+    fetch(
+      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
+      options
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setMovieList(data.results);
+      })
+      .then((response) => console.log(response))
+
+      .catch((err) => console.error(err));
   };
 
   useEffect(() => {
     fetchMovieData();
   }, []);
-
   console.log(movielist);
+
   return (
     <div className="movies-section">
       <div>
@@ -71,6 +50,19 @@ const MoviesList = () => {
         <div className="movie-list-section">
           <div>
             <p>Action</p>
+          </div>
+          <div className="movie-posters">
+            {movielist.map((data) => {
+              const { id, backdrop_path, poster_path, overview } = data;
+              return (
+                <div>
+                  <img
+                    src={`https://image.tmdb.org/t/p/original` + backdrop_path}
+                    alt=""
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
