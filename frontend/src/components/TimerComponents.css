@@ -1,0 +1,21 @@
+.countdown-timer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.countdown-timer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ccc;
+  transform: rotate(0deg);
+  transform-origin: center center;
+  transition: transform 1s linear;
+}

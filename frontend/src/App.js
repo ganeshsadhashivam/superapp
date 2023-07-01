@@ -5,15 +5,17 @@ import Userpage from "./components/Dashboard";
 import Dashboard from "./components/Dashboard";
 import DashTimerNotes from "./components/DashTimerNotes";
 import MoviesList from "./components/MoviesList";
+import TimerComponent from "./components/TimerComponent";
 
 function App() {
   return (
     <div className="App">
-      <Loginpage />
+      {/* <Loginpage />
       <Entertainmentcategory />
-      {/* <Dashboard /> */}
+      <Dashboard />  */}
       <DashTimerNotes />
-      <MoviesList />
+      {/* <MoviesList /> */}
+      {/* <TimerComponent /> */}
     </div>
   );
 }
