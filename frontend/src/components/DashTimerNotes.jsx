@@ -7,6 +7,7 @@ import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 import { CiTempHigh } from "react-icons/ci";
 import { FaWind } from "react-icons/fa";
 import { CgDropOpacity } from "react-icons/cg";
+import CountdownCircleTimerComponent from "./CountdownCircleTimerComponent";
 const DashTimerNotes = () => {
   const [weatherData, setweatherData] = useState([]);
   const [newsData, setNewsData] = useState([]);
@@ -147,8 +148,9 @@ const DashTimerNotes = () => {
           <div>
             <div className="timer-section">
               <div className="timer-border">
-                <img src="" alt="" />
-                <p>10:41:55AM</p>
+                {/* <img src="" alt="" />
+                <p>10:41:55AM</p> */}
+                <CountdownCircleTimerComponent />
               </div>
               <div className="hr-min-sec">
                 <div>
@@ -186,20 +188,23 @@ const DashTimerNotes = () => {
               <div>
                 <figure>
                   {/* <img src={Everest} alt="" /> */}
-                  <img src={newsData[7].urlToImage} alt="" />
+                  <img src={newsData[8]?.urlToImage} alt="" />
                   <figcaption>
                     <div>
                       <div>
-                        <p>Want to climb Mount Everest?</p>
+                        {/* <p>Want to climb Mount Everest?</p> */}
+                        <p>{newsData[8]?.title}</p>
                       </div>
                       <div className="date-time-in-nature">
                         <div>
-                          <p>25-6-2023</p>
+                          {/* <p>25-6-2023</p> */}
+                          <p>{newsData[8]?.publishedAt.substring(0, 10)}</p>
                         </div>
                         {/* <hr id="hr" /> */}
                         <span>|</span>
                         <div>
-                          <p>7.28PM</p>
+                          {/* <p>7.28PM</p> */}
+                          <p>{newsData[8]?.publishedAt.substring(11, 19)}</p>
                         </div>
                       </div>
                     </div>
@@ -221,7 +226,7 @@ const DashTimerNotes = () => {
                 </div>
               </div> */}
               <div className="nature-info-dash-timer-notes">
-                <p>
+                {/* <p>
                   In the years since human beings first reached the summit of
                   Mount Everest in 1953, climbing the world’s highest mountain
                   has changed dramatically. Today, hundreds of mountaineers
@@ -230,7 +235,8 @@ const DashTimerNotes = () => {
                   commercially guided expeditions that provide a veritable
                   highway up the mountain for those willing to accept both
                   the......
-                </p>
+                </p> */}
+                <p>{newsData[18]?.description}</p>
               </div>
             </aside>
           </div>
