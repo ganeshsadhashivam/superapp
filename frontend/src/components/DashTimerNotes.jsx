@@ -8,7 +8,18 @@ import { CiTempHigh } from "react-icons/ci";
 import { FaWind } from "react-icons/fa";
 import { CgDropOpacity } from "react-icons/cg";
 import CountdownCircleTimerComponent from "./CountdownCircleTimerComponent";
+import CountdownTimer from "./CountdownTimer";
 const DashTimerNotes = () => {
+  // for timer
+
+  //const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
+  const ONE_MINUTE_IN_MS = 10 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+
+  const dateTimeAfterThreeDays = NOW_IN_MS + ONE_MINUTE_IN_MS;
+
+  console.log(dateTimeAfterThreeDays);
+
   const [weatherData, setweatherData] = useState([]);
   const [newsData, setNewsData] = useState([]);
 
@@ -150,26 +161,34 @@ const DashTimerNotes = () => {
               <div className="timer-border">
                 {/* <img src="" alt="" />
                 <p>10:41:55AM</p> */}
-                <CountdownCircleTimerComponent />
+                <CountdownCircleTimerComponent
+                  targetDate={dateTimeAfterThreeDays}
+                />
               </div>
               <div className="hr-min-sec">
                 <div>
                   <p>Hour</p>
-                  <FiChevronUp />
-                  <p>03 :</p>
-                  <FiChevronDown />
-                </div>
-                <div>
                   <p>Minutes</p>
+                  <p>seconds</p>
+                  {/* <p>03 :</p> */}
+                  {/* <p>32 :</p> */}
+                  {/* <p>55</p> */}
+                </div>
+                <div>
                   <FiChevronUp />
-                  <p>32 :</p>
+                  <FiChevronUp />
+                  <FiChevronUp />
+                </div>
+                <div>
+                  <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+                </div>
+                <div>
+                  <FiChevronDown />
+                  <FiChevronDown />
+
                   <FiChevronDown />
                 </div>
                 <div>
-                  <p>seconds</p>
-                  <FiChevronUp />
-                  <p>55</p>
-                  <FiChevronDown />
                   <div>
                     <button id="start-btn">start</button>
                   </div>
